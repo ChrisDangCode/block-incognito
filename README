@@ -1,0 +1,6 @@
+I thought this would be a much longer project to try to block content from being shown while incognito but it turns out that,
+at the time of writing (June 1, 2019) it's fairly easy to detect if you're incognito for Chrome.
+
+Basically, using vanilla javascript, you just need to check if the file system API is present, and if the API isn't present, the user is incognito.
+
+To check this, you can go to this github page: https://chrisdangcode.github.io/block-incognito/
