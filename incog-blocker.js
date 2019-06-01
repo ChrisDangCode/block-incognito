@@ -1,8 +1,10 @@
 /* Based on: https://stackoverflow.com/questions/2909367/can-you-determine-if-chrome-is-in-incognito-mode-via-a-script */
+
+/* Works only for Chrome based browsers. */
 function main() {
   var fs = window.RequestFileSystem || window.webkitRequestFileSystem;
   if (!fs) {
-    hide.textContent = "check failed?";
+    hide.textContent = "Check failed. Likely not in Chrome based browser.";
     return;
   }
   fs(window.TEMPORARY, 100, function (fs) {
